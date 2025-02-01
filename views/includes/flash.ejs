@@ -1,0 +1,15 @@
+<!-- showing flash message   -->
+
+<% if(success && success.length){ %>    <!-- when success exits then it execute success.length>0 -->
+<div class="alert alert-success alert-dismissible col-6 offset-2" role="alert">
+    <%= success %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<%}%>
+
+<% if(error && error.length){ %>    <!-- when error message exist then its execute  -->
+    <div class="alert alert-danger alert-dismissible col-6 offset-2" role="alert">
+        <%= error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <%}%>

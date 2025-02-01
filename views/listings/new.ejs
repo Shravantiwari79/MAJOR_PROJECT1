@@ -1,0 +1,48 @@
+<!-- Create new Listing -->
+
+<% layout("layouts/boilerplate.ejs") %>
+<body>
+        <div class="col-8 offset-2 mt-3">  <!-- col-8(for small form),offset(space from left) mt(margin-top-3), -->
+                <h3>Create new listings</h3>
+                <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data"> <!--send post request to ("/listings") to create new listing, novalidate is bootstap property
+                     for override browser default validators by (public->js->script.js) -->
+                    <div class="mb-3">  <!-- mb(margin-bottom) is a bootstrap class  -->
+                        <lable for="title" class="form-label">Title</lable> 
+                        <input name="listing[title]" placeholder="Enter title" type="text" class="form-control" required>  
+                         <!--  form-control is bootstrap class for design and require ensure that it's neccessary to fill data-->
+                         <div class="valid-feedback"> Title looks good </div>  <!-- bootstap div for show some text if its valid-->
+                    </div>
+                    <div class="mb-3">
+                        <lable for="description" class="form-label">Description</lable>
+                        <textarea name="listing[description]"  type="text" class="form-control" required></textarea>
+                        <div class="invalid-feedback">  Please write a short description. </div> <!-- bootstap div for show some text when information is invalid-->
+                    </div>
+                    <div class="mb-3">
+                        <lable for="image" class="form-label">Upload Listing Image</lable>
+                        <input name="listing[image]"  type="file" class="form-control" required>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <lable for="price" class="form-label">Price</lable>
+                            <input name="listing[price]"  placeholder="1200" type="number" class="form-control" required>
+                            <div class="invalid-feedback"> Price should be valid. </div>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <lable for="country" class="form-label">Country</lable>
+                            <input name="listing[country]" placeholder="India" type="text" class="form-control" required>
+                            <div class="invalid-feedback"> Country should be valid. </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <lable for="location" class="form-label">Location</lable>
+                        <input name="listing[location]" placeholder="Chitrakoot,Uttar Pradesh" type="text" class="form-control" required>
+                        <div class="invalid-feedback">  Location should be valid. </div>
+                    </div>
+                   
+                    <button class="btn btn-dark add-btn mt-3">Add</button>  <!-- submit all information  to app.post(/listings) rout -->
+                    <br><br>
+                </form>
+            </div>
+            </div>
+     </form>
+</body>

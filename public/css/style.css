@@ -1,0 +1,142 @@
+/* for stucking the footer */
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+ /* for body inside boilerplate so that take whole width */
+.container{  
+    flex: 1;    
+}
+
+/* NAVBAR */
+.navbar{
+    height:5rem;
+    background-color: white;
+}
+
+/* Compass(icon) color */
+.fa-compass{
+    color:#fe424d;
+    font-size: 2rem;
+}
+
+/* add listing, all listings color */
+.nav-link{
+    color:#222222 !important;   /*  !important (use for override bootstrap property  */
+}
+
+/* Footer */
+/* facebook Icon color */
+.fa-facebook{
+    color: #000;
+}
+
+/* Instagrame icon color */
+.fa-square-instagram{
+    color:#000;
+}
+
+/* Linkedin Icon color */
+.fa-linkedin{
+    color:black;
+}
+
+/* privacy and terms remove underline and color black */
+.f-info-links a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* after hover show underline in privacy and terms */
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+/* 100% width for privacy and terms also social media icons and Wanderlust pvt. */
+.f-info-links, .nav-info-socials,.f-info-brand{
+    width:100%;
+    display:flex;
+    align-items: center;    
+    justify-content: center;
+}
+
+
+
+.nav-info-socials i{
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+
+/* styling on all content of footer */
+.f-info{
+    text-align: center; /* align all items on center*/
+    height:8rem;     /* height of the footer is 8rem*/
+    background-color: #ebebeb;  /* bg color of the footer */
+    display:flex;     /* for allign the items*/
+    flex-wrap: wrap;    /* wrap the items*/
+    justify-content: center;    /* content assign on center*/
+    align-items:space-evenly;   /* space between items is eqally devided*/
+}
+
+/* CARDS styling */
+
+/* its property apply on whole cards */
+.listing-card{
+    border: none !important;     /* remove card border */
+    margin-bottom: 2rem;    /* bottom space b/w cards is 2rem*/
+}
+
+/* Only for image */
+.card-img-top{
+    border-radius: 1rem !important; /* for circuler image border */
+    width:100% !important;
+    object-fit: cover !important;
+}
+
+/* only for card body */
+.card-body{
+    padding: 0 !important;
+}
+
+/* for card body paragraph */
+.card-text p{
+    font-weight: 400;
+}
+
+/* remove underline from card body ofter linking with route thorow anchor tag */
+.listing_link{
+    text-decoration: none;
+}
+
+/* Card effect */
+.card-img-top:hover{
+    opacity:0.8;
+}
+
+/* add btn styling */
+.add-btn{
+    background-color:#fe424d !important;
+    border:none !important;
+}
+
+/* Edit button */
+.edit-btn{
+    background-color:#fe424d !important;
+    border:none !important;
+}
+
+/* SHow image */
+.show-img{
+    height:40vh;
+}
+
+.btns{
+    display: flex;
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
