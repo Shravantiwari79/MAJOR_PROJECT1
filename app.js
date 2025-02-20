@@ -7,8 +7,8 @@ const express = require("express"); // include express
 const app = express();  // all express thing inside the app
 const mongoose = require("mongoose");   // include mongoose for connect with node
 
-//const dbUrl = process.env.ATLASDB_URL;   // build database connection Wonderlust is our database
-const dbUrl = 'mongodb://127.0.0.1:27017/Wonderlust'
+const dbUrl = process.env.ATLASDB_URL;   // build database connection Wonderlust is our database
+//const dbUrl = 'mongodb://127.0.0.1:27017/Wonderlust'
 const path = require('path'); //Include pata for views
 const methodOverride = require("method-override");  // for PUT request (when we edit listing)
 const ejsMate = require("ejs-mate");  // for creating boilerplates(layout)
