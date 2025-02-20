@@ -7,8 +7,8 @@ const express = require("express"); // include express
 const app = express();  // all express thing inside the app
 const mongoose = require("mongoose");   // include mongoose for connect with node
 
-const dbUrl = process.env.ATLASDB_URL;   // build database connection Wonderlust is our database
-
+//const dbUrl = process.env.ATLASDB_URL;   // build database connection Wonderlust is our database
+const dbUrl = 'mongodb://127.0.0.1:27017/Wonderlust'
 const path = require('path'); //Include pata for views
 const methodOverride = require("method-override");  // for PUT request (when we edit listing)
 const ejsMate = require("ejs-mate");  // for creating boilerplates(layout)
@@ -35,7 +35,7 @@ main().
     
 // Database connection async function
 async function main(){
-   await mongoose.connect(dbUrl);
+   await mongoose.connect(dbUrl);    //dbUrl
 }
 
 
@@ -115,6 +115,8 @@ app.use((err,req,res,next)=>{
     //res.render("error.ejs",message);
     res.status(status).render("error.ejs",{message});   //only messege send as a response status show only on page inspect and error show on error.ejs page
 })
+
+
 
 // for running the nodejs server 
 app.listen(8080,()=>{
