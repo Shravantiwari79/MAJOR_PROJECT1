@@ -12,7 +12,8 @@ body{
 /* NAVBAR */
 .navbar{
     height:5rem;
-    background-color: white;
+    background-color:rgb(154, 234, 227);
+    /* opacity:0.8; */
 }
 
 /* Compass(icon) color */
@@ -23,7 +24,7 @@ body{
 
 /* add listing, all listings color */
 .nav-link{
-    color:#222222 !important;   /*  !important (use for override bootstrap property  */
+    color:#222222 !important;   /*  !important (use for override bootstrap property rgb(154, 234, 227 */
 }
 
 /* Footer */

@@ -20,6 +20,20 @@
     padding: 0.5rem 3rem 0.5rem 3rem;
     font-size: 1rem;
   }
+  .nav-tog-bg{
+    background-color:rgb(154, 234, 227);
+    /* opacity:0.8; */
+  }
+  .nav-tog-bg:hover{
+    opacity:1;
+  }
+  .container-fluid{
+    padding: 0;
+  }
+
+  .navbar-nav{
+    padding:0 12px;
+  }
 </style>
 
  <nav class="navbar navbar-expand-md bg-body-light navbarScroll border-bottom sticky-top">  <!--navbar-expand-md(in medium screen we get 3arrow functionality  ) ,
@@ -33,7 +47,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
       
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse justify-content-end nav-tog-bg" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="/listings">Explore</a>
          

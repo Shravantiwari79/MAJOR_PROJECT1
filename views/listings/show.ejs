@@ -6,7 +6,7 @@
         <div class="col-8 offset-3 mt-2">   <!-- This div for image heading  -->
             <h3><%=listing.title%></h3>
         </div>
-        <div class="card listing-card col-6 offset-3 show-card" >  <!-- this div for manage image  -->
+        <div class="card listing-card col-8 offset-3 show-card" >  <!-- this div for manage image  -->
         <img class="card-img-top show-img" src="<%=listing.image.url%>" alt="listing_image">
         <div class="card-body">
           <p class="card-text">
@@ -22,7 +22,7 @@
         condition(if currUser exits and currUser id same as listing.owner._id then edit and delete button visible to user) -->
    
         <div class="btns mb-3">
-    <a href="/listings/<%=listing._id%>/new" class="btn btn-dark edit-btn col-1 offset-3">Edit</a>  <!-- send request for edit (/listings/:id/new) -->
+    <a href="/listings/<%=listing._id%>/new" class="btn btn-dark edit-btn col-2 offset-3">Edit</a>  <!-- send request for edit (/listings/:id/new) -->
     
     <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE"> <!-- send request for delete on (listings/:id) -->
         <button class="btn btn-dark  offset-5 ">Delete</button>
@@ -62,9 +62,9 @@
     <hr>
     <p><b>All Reviews</b></p>
     <ul>
-      <div class="row">
+      <div class="row ">
      <% for(review of listing.review){%> <!-- showing review in the form of cards   -->
-      <div class="card col-5 mb-2 mt-2 ms-3">
+      <div class="card col-8 mb-2 mt-2 ms-3">
         <div class="card-body">
           <h5 class="card-title">@<%= review.author.username%></h5>
           <p class="starability-result card-text" data-rating="<%= review.rating%>"></p>
