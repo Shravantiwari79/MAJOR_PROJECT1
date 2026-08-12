@@ -1,11 +1,18 @@
-if(process.env.NODE_ENV != "production"){
-    require('dotenv').config();
-}
-console.log(process.env.secret);
+// if(process.env.NODE_ENV != "production"){
+//     require('dotenv').config();
+// }
+// console.log(process.env.secret);
 
 const express = require("express"); // include express
 const app = express();  // all express thing inside the app
 const mongoose = require("mongoose");   // include mongoose for connect with node
+
+const dns = require("dns");
+
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+require("dotenv").config();
+
 
 const dbUrl = process.env.ATLASDB_URL;   // build database connection Wonderlust is our database
 // const dbUrl = 'mongodb://127.0.0.1:27017/Wonderlust'
@@ -62,7 +69,7 @@ const store = MongoStore.create({
 });
 
 // for mongo store error detection
-store.on("error",()=>{
+store.on("error",(err)=>{
     console.log("ERROR IN MONGO SESSION STORE",err)
 });
 
