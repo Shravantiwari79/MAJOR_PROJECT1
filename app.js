@@ -1,6 +1,6 @@
-// if(process.env.NODE_ENV != "production"){
-//     require('dotenv').config();
-// }
+if(process.env.NODE_ENV != "production"){
+    require('dotenv').config();
+}
 // console.log(process.env.secret);
 
 const express = require("express"); // include express
@@ -11,7 +11,7 @@ const dns = require("dns");
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
-require("dotenv").config();
+// require("dotenv").config();
 
 
 const dbUrl = process.env.ATLASDB_URL;   // build database connection Wonderlust is our database
