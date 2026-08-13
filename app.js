@@ -1,3 +1,7 @@
+app.locals.success = [];
+app.locals.error = [];
+app.locals.currUser = null;
+
 if(process.env.NODE_ENV != "production"){
     require('dotenv').config();
 }
