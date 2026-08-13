@@ -92,8 +92,8 @@ const sessionOptions = {
 app.use(session(sessionOptions));   // express-session middleware
 app.use(flash());   // flash middleware for showing message once when new listings created
 
-// app.locals.success = [];
-// app.locals.error = [];
+app.locals.success = [];
+app.locals.error = [];
 
 app.locals.currUser = null;
 // thease are for user authentication
