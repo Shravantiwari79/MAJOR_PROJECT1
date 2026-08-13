@@ -61,12 +61,12 @@ app.use(express.static(path.join(__dirname,"/public")));    // use for static fi
 
 // creating mongo session
 console.log("SECRET exists:", !!process.env.SECRET);
-console.log("SECRET length:", process.env.SECRET?.length);
+// console.log("SECRET length:", process.env.SECRET?.length);
 const store = MongoStore.create({
     mongoUrl:dbUrl,
-    crypto:{
-        secret: process.env.SECRET,
-    },
+    // crypto:{
+    //     secret: process.env.SECRET,
+    // },
     touchAfter: 24*3600,    // for 14 days
 });
 
