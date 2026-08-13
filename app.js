@@ -104,7 +104,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req,res,next)=>{
     res.locals.success = req.flash("success");  // success flash
     res.locals.error = req.flash("error");  // error flash
-    res.locals.currUser = req.user; //current user information which currently logged in
+    res.locals.currUser = req.user || null; //current user information which currently logged in
     next();
 })
 
