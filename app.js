@@ -60,6 +60,8 @@ app.use(express.static(path.join(__dirname,"/public")));    // use for static fi
 // })
 
 // creating mongo session
+console.log("SECRET exists:", !!process.env.SECRET);
+console.log("SECRET length:", process.env.SECRET?.length);
 const store = MongoStore.create({
     mongoUrl:dbUrl,
     crypto:{
